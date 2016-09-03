@@ -1,6 +1,6 @@
 angular.module('app.controllers', [])
 
-.controller('homeCtrl', ['$scope', '$state', '$stateParams',
+.controller('LoginController', ['$scope', '$state', '$stateParams',
 // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
 // You can include any angular dependencies as parameters for this function
 // TIP: Access Route Parameters for your page via $stateParams.parameterName
@@ -21,9 +21,9 @@ function ($scope, $state, $stateParams, $ionicActionSheet) {
 
    $scope.triggerActionSheet = function(id, title) {
 
-      $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
-        console.log('productsListController $stateChangeStart');
-      });
+      // $scope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams){
+      //   console.log('productsListController $stateChangeStart');
+      // });
 
       // Show the action sheet
       var showActionSheet = $ionicActionSheet.show({
@@ -42,16 +42,16 @@ function ($scope, $state, $stateParams, $ionicActionSheet) {
          },
 
          buttonClicked: function(index) {
-            if(index === 0) {
-               $state.go('menu.edit', {id: id});
+            if (index === 0) {
+               $state.go('menu.product_edit', { id: id });
             }
 
-            if(index === 1) {
+            if (index === 1) {
                // add edit 2 code
                alert('プレビュー');
             }
 
-            if(index === 2) {
+            if (index === 2) {
                // add edit 2 code
                alert('コピー');
             }
