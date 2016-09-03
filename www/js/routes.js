@@ -16,7 +16,7 @@ angular.module('app.routes', [])
         .state('menu.login', {
             url: '/login',
             views: {
-                'side-menu': {
+                'content@menu': {
                     templateUrl: 'templates/login.html',
                     controller: 'LoginController'
                 }
@@ -24,9 +24,9 @@ angular.module('app.routes', [])
         })
 
         .state('menu.products', {
-            url: '/products/list',
+            url: '/products',
             views: {
-                'side-menu': {
+                'content@menu': {
                     templateUrl: 'templates/products.html',
                     controller: 'ProductsListController'
                 }
@@ -44,10 +44,10 @@ angular.module('app.routes', [])
         //     }
         // })
 
-        .state('menu.product_edit', {
-            url: '/products/edit/:id',
+        .state('menu.products.edit', {
+            url: '/edit/:id',
             views: {
-                'side-menu': {
+                'content@menu': {
                     templateUrl: 'templates/products_edit.html',
                     controller: 'ProductsEditController',
                     params: { id: null }
@@ -58,7 +58,7 @@ angular.module('app.routes', [])
         .state('menu.stocks', {
             url: '/stocks/list',
             views: {
-                'side-menu': {
+                'content@menu': {
                     templateUrl: 'templates/stocks.html',
                     controller: 'cloudCtrl'
                 }

@@ -42,7 +42,7 @@ function ($scope, $state, $stateParams, $ionicActionSheet) {
 
             buttonClicked: function(index) {
                 if (index === 0) {
-                    $state.go('menu.product_edit', { id: id });
+                    $state.go('menu.products.edit', { id: id });
                 }
                 if (index === 1) {
                     // add edit 2 code
