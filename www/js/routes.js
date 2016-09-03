@@ -24,7 +24,7 @@ angular.module('app.routes', [])
     })
 
     .state('menu.products', {
-      url: '/products',
+      url: '/products/list',
       views: {
         'side-menu': {
           templateUrl: 'templates/products.html',
@@ -45,7 +45,7 @@ angular.module('app.routes', [])
     // })
 
     .state('menu.product_edit', {
-      url: '/:id',
+      url: '/products/edit/:id',
       views: {
         'side-menu': {
           templateUrl: 'templates/products_edit.html',
@@ -63,7 +63,7 @@ angular.module('app.routes', [])
           controller: 'cloudCtrl'
         }
       }
-    })
+    });
 
   $urlRouterProvider.otherwise('/side-menu/login')
 
