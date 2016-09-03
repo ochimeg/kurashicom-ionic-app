@@ -11,7 +11,7 @@ angular.module('app.routes', [])
   .state('menu.dashboard', {
     url: '/dashboard',
     views: {
-      'side-menu21': {
+      'side-menu': {
         templateUrl: 'templates/home.html',
         controller: 'homeCtrl'
       }
@@ -21,7 +21,7 @@ angular.module('app.routes', [])
   .state('menu.products', {
     url: '/products',
     views: {
-      'side-menu21': {
+      'side-menu': {
         templateUrl: 'templates/products.html',
         controller: 'productsListController'
       }
@@ -42,7 +42,7 @@ angular.module('app.routes', [])
   .state('menu.edit', {
     url: '/:id',
     views: {
-      'side-menu21': {
+      'side-menu': {
         templateUrl: 'templates/products_edit.html',
         controller: 'productsEditController',
         params: {'id' : null}
@@ -53,7 +53,7 @@ angular.module('app.routes', [])
   .state('menu.stocks', {
     url: '/stocks/list',
     views: {
-      'side-menu21': {
+      'side-menu': {
         templateUrl: 'templates/stocks.html',
         controller: 'cloudCtrl'
       }
@@ -61,12 +61,12 @@ angular.module('app.routes', [])
   })
 
   .state('menu', {
-    url: '/side-menu21',
+    url: '/side-menu',
     templateUrl: 'templates/menu.html',
     abstract:true
   })
 
-$urlRouterProvider.otherwise('/side-menu21/dashboard')
+$urlRouterProvider.otherwise('/side-menu/dashboard')
 
 
 
